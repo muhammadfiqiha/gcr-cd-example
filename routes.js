@@ -26,7 +26,7 @@ const routes = [
             const { data } = request.payload;
             let resultBinary = '';
 
-            if (typeof data !== 'number' && !Number.isInteger(data)) {
+            if (typeof data !== 'number' || !Number.isInteger(data)) {
                 const response = h.response({
                     status: 'fail',
                     message: 'Input harus angka dan bilangan bulat!',
