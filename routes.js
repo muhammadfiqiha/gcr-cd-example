@@ -40,9 +40,10 @@ const routes = [
             }
 
             else {
-                while(data > 0) {
-                    resultBinary = (data % 2) + resultBinary;
-                    data = Math.floor(data / 2);
+                let num = data;
+                while(num > 0) {
+                    resultBinary = (num % 2) + resultBinary;
+                    num = Math.floor(num / 2);
                 }
             }
 
