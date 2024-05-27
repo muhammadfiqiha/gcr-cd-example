@@ -55,6 +55,44 @@ const routes = [
             return response;
         }
     },
+    {
+        path: '/fibonacci',
+        method: 'POST',
+        handler: (request, h) => {
+
+            const { n } = request.payload;
+
+            let num = n;
+            let num1 = 0, num2 = 1;
+
+            function add_fibonacci (i) {
+                if (i == 1) {
+                    return 0;
+                }
+                else if (i == 2) {
+                    return 1;
+                }
+                else {
+                    while(i != 2){
+                        total = num1 + num2;
+                        num1 = num2;
+                        num2 = total;
+                        i--;
+                    }
+                    return total;
+                }
+            }
+
+            resultFibo = add_fibonacci(num);
+
+            const response = h.response({
+                status: 'success',
+                result: resultFibo,
+            });
+            response.code(200);
+            return response;
+        }
+    },
 ];
 
 module.exports = routes;
