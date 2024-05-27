@@ -142,5 +142,7 @@ const fibonacci = async (request, h) => {
 
 module.exports = {
     convertBinary,
-    fibonacci
+    fibonacci,
+    insertStudent,
+    getStudent,
 }

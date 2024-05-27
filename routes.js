@@ -1,4 +1,4 @@
-const { convertBinary, fibonacci } = require('./handler.js');
+const { convertBinary, fibonacci, insertStudent, getStudent } = require('./handler.js');
 
 const routes = [
     {
@@ -29,6 +29,16 @@ const routes = [
         path: '/fibonacci',
         method: 'POST',
         handler: fibonacci
+    },
+    {
+        path: '/insertStudent',
+        method: 'POST',
+        handler: insertStudent
+    },
+    {
+        path: '/getStudent',
+        method: 'GET',
+        handler: getStudent
     },
 ];
 
