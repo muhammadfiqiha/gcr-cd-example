@@ -1,7 +1,6 @@
 FROM node:lts
 WORKDIR /app
-COPY package.json .
+COPY . .
 RUN npm i
 COPY . .
-EXPOSE 3000
 CMD ["npm", "run", "start"]
