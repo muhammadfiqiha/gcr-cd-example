@@ -1,5 +1,5 @@
 const mysql = require('promise-mysql');
-/*
+
 // createUnixSocketPool initializes a Unix socket connection pool for
 // a Cloud SQL instance of MySQL.
 const createUnixSocketPool = async config => {
@@ -15,7 +15,7 @@ let pool;
 (async () => {
     pool = await createUnixSocketPool();
 })();
-*/
+
 
 const insertStudent = async (request, h) => {
 
